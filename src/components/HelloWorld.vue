@@ -4,11 +4,14 @@ import { ref } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+  const MODE = import.meta.env.MODE
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
+  <div>{{ MODE }}</div>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
