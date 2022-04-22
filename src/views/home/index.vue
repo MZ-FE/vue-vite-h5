@@ -11,7 +11,7 @@
   <icon-accessibility />
   <icon-account-box style="font-size: 2em; color: red" />
 
-  <div class="mt-6">{{ t('welcome to') }}1</div>
+  <div class="mt-6">{{ t('welcome to') }}11</div>
   <div>
     <van-button type="primary" @click="router.push({ name: 'process' })">MarkdownPage</van-button>
     <van-button type="success" @click="router.push({ name: '401' })">401</van-button>
