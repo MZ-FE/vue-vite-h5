@@ -10,5 +10,5 @@ const goBack = () => {
   });
 };
 
-let show = true;
+const show = true;
 </script>
