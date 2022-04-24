@@ -50,10 +50,6 @@
 - [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader) - 支持以 组件形式使用 SVG 图片
 - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist) - 允许你在 vite 中显式设置依赖项
 
-### 编码风格
-
-- [ESLint](https://eslint.org/) 配置为 [Airbnb Style](https://github.com/airbnb/javascript)
-
 ### 开发工具
 
 - [TypeScript](https://www.typescriptlang.org/)
@@ -92,3 +88,42 @@ npm run build
 ```
 
 然后你会看到用于发布的 `dist` 文件夹被生成。
+只需要执行以下命令就可以在 http://localhost:8080 中看到
+
+## 代码管理
+
+> 通过 Eslint + Prettier + Husky + Commitlint + commitizen + Lint-staged 规范前端工程代码
+
+### 编码风格
+
+- .editorconfig 配置统一编辑器配置
+- [ESLint](https://eslint.org/) 配置为 [Airbnb Style](https://github.com/airbnb/javascript)
+
+### 提交代码
+
+```bash
+npm run commit
+```
+
+### changelog
+
+> 通过工具`conventional-changelog`来自动生成 changelog
+
+```bash
+npm run changelog
+```
+
+### standard-version
+
+> 会根据`pacakage.json`中的`version`更新版本号，升级版本，打包 tag，并更新`changelog`。
+
+```bash
+// 当前版本v1.0.0
+standard-version // output v1.1.0
+
+// -r 指定版本
+standard-version -r major // output v2.0.0
+standard-version -r minor // output v1.1.0
+standard-version -r patch // output v1.0.1
+standard-version -r 3.0.0 // output v3.0.0
+```
