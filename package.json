@@ -51,6 +51,7 @@
     "lint-staged": "^12.3.2",
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.2",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
     "standard-version": "^9.3.2",

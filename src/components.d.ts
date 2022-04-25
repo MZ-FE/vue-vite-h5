@@ -5,7 +5,6 @@
 declare module 'vue' {
   export interface GlobalComponents {
     VanButton: typeof import('vant/es')['Button']
-    VanEmpty: typeof import('vant/es')['Empty']
     VanNavBar: typeof import('vant/es')['NavBar']
     VanRadio: typeof import('vant/es')['Radio']
     VanRadioGroup: typeof import('vant/es')['RadioGroup']

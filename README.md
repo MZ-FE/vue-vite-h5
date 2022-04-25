@@ -102,6 +102,7 @@ npm run build
 ### 提交代码
 
 ```bash
+git add .
 npm run commit
 ```
 
@@ -113,13 +114,15 @@ npm run commit
 npm run changelog
 ```
 
-### standard-version
+### 版本管理`standard-version`
 
 > 会根据`pacakage.json`中的`version`更新版本号，升级版本，打包 tag，并更新`changelog`。
 
 ```bash
 // 当前版本v1.0.0
 standard-version // output v1.1.0
+// 或者
+npm run release // 相当于运行standard-version
 
 // -r 指定版本
 standard-version -r major // output v2.0.0
