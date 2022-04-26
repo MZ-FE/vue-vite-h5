@@ -49,6 +49,7 @@
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
 - [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader) - 支持以 组件形式使用 SVG 图片
 - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist) - 允许你在 vite 中显式设置依赖项
+- [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) - 浏览器适配 Viewport 布局
 
 ### 开发工具
 
