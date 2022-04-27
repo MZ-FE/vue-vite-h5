@@ -1,7 +1,7 @@
 {
-  "name": "vite-vue-h5",
-  "version": "0.0.3",
-  "author": "xianyh1",
+  "name": "<%= projectName %>",
+  "version": "<%= version %>",
+  "author": "<%= author %>",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

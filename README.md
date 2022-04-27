@@ -66,7 +66,7 @@
 
 ### 开发
 
-只需要执行以下命令就可以在 http://localhost:端口号 中看到
+只需要执行以下命令就可以在 http://localhost:端口号 中看到,端口号默认为5000
 
 ```bash
 npm run dev
