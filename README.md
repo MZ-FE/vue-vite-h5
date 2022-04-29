@@ -91,6 +91,7 @@ npm run build
 
 - .editorconfig 配置统一编辑器配置
 - [ESLint](https://eslint.org/) 配置为 [Airbnb Style](https://github.com/airbnb/javascript)
+- [Stylelint](https://stylelint.io/)
 
 ### 提交代码
 

@@ -9,9 +9,9 @@
   </van-radio-group>
 
   <icon-accessibility />
-  <icon-account-box style="font-size: 2em; color: red" />
+  <icon-account-box style="font-size: 2em" />
 
-  <div class="mt-6 ss" style="font-size: 30px">{{ t('welcome to') }}1122333</div>
+  <div class="mt-6" style="font-size: 30px">{{ t('welcome to') }}1122333</div>
   <div>
     <van-button type="primary" @click="router.push({ name: 'process' })">MarkdownPage</van-button>
     <van-button type="success" @click="router.push({ name: '401' })">401</van-button>
@@ -31,8 +31,5 @@ const { t, locale } = useI18n();
 <style lang="scss" scoped>
 a {
   @apply text-sky-400 hover:(text-sky-600) transition-all ease-out duration-100;
-}
-.ss {
-  font-size: 40px;
 }
 </style>
