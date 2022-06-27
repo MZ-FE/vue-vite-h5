@@ -8,21 +8,21 @@
     <van-radio name="en">English</van-radio>
   </van-radio-group>
 
-  <icon-accessibility />
-  <icon-account-box style="font-size: 2em" />
+  <i-carbon-accessibility />
+  <i-mdi-account-box class="text-2rem" />
+  <i-custom-avatar />
 
-  <div class="mt-6" style="font-size: 30px">{{ t('welcome to') }}1122333</div>
+  <div class="mt-6 text-30px">{{ t('welcome to') }}1122333</div>
   <div>
-    <van-button type="primary" @click="router.push({ name: 'process' })">MarkdownPage</van-button>
+    <van-button type="primary" @click="router.push({ name: 'process' })">
+      <span class="font-sans">MarkdownPage</span>
+    </van-button>
     <van-button type="success" @click="router.push({ name: '401' })">401</van-button>
     <van-button type="default" @click="router.push({ name: '404' })">404</van-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import IconAccessibility from '~icons/carbon/accessibility';
-import IconAccountBox from '~icons/mdi/account-box';
-
 const router = useRouter();
 
 const { t, locale } = useI18n();

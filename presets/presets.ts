@@ -6,8 +6,9 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
+import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { VantResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
-import WindiCSS from 'vite-plugin-windicss';
+import unocss from 'unocss/vite';
 import Markdown from 'vite-plugin-md';
 import Prism from 'markdown-it-prism';
 import ViteFonts from 'vite-plugin-fonts';
@@ -15,17 +16,13 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import LinkAttributes from 'markdown-it-link-attributes';
 import { ConfigEnv } from 'vite';
 import { resolve } from 'path';
-import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 const defaultClasses = 'prose prose-sm m-auto text-left';
 
-export default (env: ConfigEnv) => {
+export default (env: ConfigEnv, srcPath: string) => {
   return [
     vue({
       include: [/\.vue$/, /\.md$/],
-    }),
-    styleImport({
-      resolves: [VantResolve()],
     }),
     vueJsx(),
     svgLoader(),
@@ -50,10 +47,13 @@ export default (env: ConfigEnv) => {
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       // imports 指定组件所在位置，默认为 src/components; 有需要也可以加上 view 目录
       dirs: ['src/components/'],
-      resolvers: [VantResolver(), IconsResolver(), VueUseComponentsResolver()],
+      resolvers: [VantResolver(), IconsResolver({ customCollections: ['custom'] }), VueUseComponentsResolver()],
     }),
     Icons({
       compiler: 'vue3',
+      customCollections: {
+        custom: FileSystemIconLoader(`${srcPath}/assets/svg`),
+      },
       autoInstall: true,
     }),
     ViteFonts({
@@ -64,9 +64,7 @@ export default (env: ConfigEnv) => {
     VueI18n({
       include: [resolve(__dirname, '../locales/**')],
     }),
-    WindiCSS({
-      safelist: defaultClasses,
-    }),
+    unocss(),
     Markdown({
       wrapperClasses: defaultClasses,
       headEnabled: false,
