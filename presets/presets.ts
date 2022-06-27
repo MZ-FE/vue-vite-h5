@@ -8,7 +8,7 @@ import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { VantResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers';
-import WindiCSS from 'vite-plugin-windicss';
+import unocss from 'unocss/vite';
 import Markdown from 'vite-plugin-md';
 import Prism from 'markdown-it-prism';
 import ViteFonts from 'vite-plugin-fonts';
@@ -64,9 +64,7 @@ export default (env: ConfigEnv, srcPath: string) => {
     VueI18n({
       include: [resolve(__dirname, '../locales/**')],
     }),
-    WindiCSS({
-      safelist: defaultClasses,
-    }),
+    unocss(),
     Markdown({
       wrapperClasses: defaultClasses,
       headEnabled: false,
