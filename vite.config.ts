@@ -1,16 +1,18 @@
 import { defineConfig, loadEnv } from 'vite';
+import { fileURLToPath } from 'url';
 import { resolve } from 'path';
 import presets from './presets/presets';
 
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
   // env 环境变量
-  const viteEnv = loadEnv(env.mode, `.env.${env.mode}`);
-
+  const viteEnv = loadEnv(env.mode, process.cwd());
+  const rootPath = fileURLToPath(new URL('./', import.meta.url));
+  const srcPath = `${rootPath}src`;
   return {
     base: viteEnv.VITE_BASE,
     // 插件
-    plugins: [presets(env)],
+    plugins: presets(env, srcPath),
     // 别名设置
     resolve: {
       alias: {
@@ -38,6 +40,8 @@ export default defineConfig((env) => {
       brotliSize: false,
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 2000,
+      // 打包使用terser压缩
+      minify: 'terser',
       // 在生产环境移除console.log
       terserOptions: {
         compress: {

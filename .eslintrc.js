@@ -19,7 +19,11 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended', // 添加 prettier 插件
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-prettier',
+    '@vue/typescript/recommended',
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -28,8 +32,21 @@ module.exports = {
   plugins: ['vue', '@typescript-eslint', 'import'],
   rules: {
     'no-console': 'off',
+    'no-shadow': 'off',
+    'no-use-before-define': 'off',
+    'no-unused-vars': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/no-empty-interface': [
+      'error',
+      {
+        allowSingleExtends: true,
+      },
+    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true, varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-use-before-define': ['error', { classes: true, functions: false, typedefs: false }],
   },
 };
