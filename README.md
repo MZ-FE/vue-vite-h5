@@ -10,7 +10,7 @@
 - 📦 [组件自动按需加载](https://github.com/antfu/unplugin-vue-components) - 自动按需注册组件, 无需 import
 - 📥 [API 自动按需加载](https://github.com/antfu/unplugin-auto-import) - 无需手动 import 进行引入
 - 🍍 [Pinia 状态管理](https://pinia.esm.dev/) - 你将会喜欢上的 Vue Store
-- 🎨 [Windi CSS](https://github.com/windicss/windicss) - 下一代实用的原子 css 框架
+- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 功能强大且性能极高的 CSS 引擎
 - 😃 [icones](https://github.com/antfu/unplugin-icons) - 强大的图标库，各种图标集为你所用
 - 🌍 [I18n 国际化开箱即用](./locales) - 想要翻译？是的，都可以！
 - 👩‍🎨 [NProgress](https://github.com/rstacruz/nprogress) - 页面加载进度反馈
@@ -20,10 +20,12 @@
 
 ## 已配置
 
+### CSS 引擎
+
+- [UnoCSS](https://github.com/unocss/unocss) - 功能非常强大（完全可定制、属性化、纯 CSS 图标等功能）；性能更高，没有解析、AST、扫描，它是即时的（比 Windi CSS 或 Tailwind JIT 快 200 倍）。
+
 ### UI 框架
 
-- [Windi CSS](https://github.com/windicss/windicss) (按需的 [TailwindCSS](https://tailwindcss.com/)) - 更轻，更快和和一系列额外的特性!
-  - [Windi CSS Typography](https://windicss.org/plugins/official/typography.html)
 - [Vant](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端组件库
 
 ### Icons
@@ -38,7 +40,7 @@
 - [Axios](https://github.com/axios/axios) - 基于 Promise 的 HTTP 请求库
 - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - 自动按需加载组件
 - [ "](https://github.com/antfu/unplugin-auto-import) - 自动按需加载 API
-- [vite-plugin-windicss](https://github.com/antfu/vite-plugin-windicss) - Windi CSS 的整合
+- [UnoCSS](https://github.com/unocss/unocss) - 强大的 CSS 引擎
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown 作为组件，也可以让组件在 Markdown 中使用
   - [markdown-it-prism](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) 的语法高亮
   - [prism-theme-vars](https://github.com/antfu/prism-theme-vars) - 利用 CSS 变量自定义 Prism.js 的主题
