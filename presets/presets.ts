@@ -1,6 +1,5 @@
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import svgLoader from 'vite-svg-loader';
 import legacy from '@vitejs/plugin-legacy';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
@@ -14,18 +13,16 @@ import Prism from 'markdown-it-prism';
 import ViteFonts from 'vite-plugin-fonts';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import LinkAttributes from 'markdown-it-link-attributes';
-import { ConfigEnv } from 'vite';
 import { resolve } from 'path';
 
 const defaultClasses = 'prose prose-sm m-auto text-left';
 
-export default (env: ConfigEnv, srcPath: string) => {
+export default (srcPath: string) => {
   return [
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
     vueJsx(),
-    svgLoader(),
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),

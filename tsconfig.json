@@ -10,7 +10,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "node", "@intlify/vite-plugin-vue-i18n/client"],
+    "types": ["vite/client", "node", "@intlify/vite-plugin-vue-i18n/client","unplugin-icons/types/vue"],
     // baseUrl来告诉编译器到哪里去查找模块，所有非相对模块导入都会被当做相对于 baseUrl。
     "baseUrl": ".",
     // 非相对模块导入的路径映射配置

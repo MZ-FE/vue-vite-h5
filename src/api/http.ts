@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
-import showCodeMessage from '@/api/code';
+// import showCodeMessage from '@/api/code';
 import { formatJsonToUrlParams, instanceObject } from '@/utils/format';
 
 const BASE_PREFIX = import.meta.env.VITE_API_BASEURL;

@@ -1,22 +1,21 @@
 import { defineConfig, loadEnv } from 'vite';
 import { fileURLToPath } from 'url';
-import { resolve } from 'path';
 import presets from './presets/presets';
 
 // https://vitejs.dev/config/
-export default defineConfig((env) => {
+export default defineConfig(({ mode, command }) => {
   // env 环境变量
-  const viteEnv = loadEnv(env.mode, process.cwd());
+  const viteEnv = loadEnv(mode, process.cwd());
   const rootPath = fileURLToPath(new URL('./', import.meta.url));
   const srcPath = `${rootPath}src`;
   return {
     base: viteEnv.VITE_BASE,
     // 插件
-    plugins: presets(env, srcPath),
+    plugins: presets(srcPath),
     // 别名设置
     resolve: {
       alias: {
-        '@': resolve(__dirname, './src'), // 把 @ 指向到 src 目录去
+        '@': fileURLToPath(new URL('./src', import.meta.url)), // 把 @ 指向到 src 目录去
       },
     },
     // 服务设置
@@ -37,18 +36,11 @@ export default defineConfig((env) => {
       },
     },
     build: {
-      brotliSize: false,
+      // 禁用 gzip 压缩大小报告
+      reportCompressedSize: false,
       // 消除打包大小超过500kb警告
       chunkSizeWarningLimit: 2000,
-      // 打包使用terser压缩
-      minify: 'terser',
-      // 在生产环境移除console.log
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-        },
-      },
+
       assetsDir: 'static/assets',
       // 静态资源打包到dist下的不同目录
       rollupOptions: {
@@ -69,6 +61,10 @@ export default defineConfig((env) => {
           javascriptEnabled: true,
         },
       },
+    },
+    esbuild: {
+      // 打包时去除console和debugger
+      drop: command === 'build' ? ['console', 'debugger'] : [],
     },
   };
 });

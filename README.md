@@ -4,17 +4,16 @@
 
 - ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) - 快！
 - 💪 [Typescript](https://www.typescriptlang.org/) - 当然！必不可少
-- 🎉 [Vant 3](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端 Vue 组件库
+- 🎉 [Vant 4](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端 Vue 组件库
 - 🔥 [Axios 配置和封装](https://github.com/axios/axios) - 基于 Promise 的 HTTP 请求库
 - 💡 [Vue Router 4](https://router.vuejs.org/zh/) - Vuejs 的官方路由
 - 📦 [组件自动按需加载](https://github.com/antfu/unplugin-vue-components) - 自动按需注册组件, 无需 import
 - 📥 [API 自动按需加载](https://github.com/antfu/unplugin-auto-import) - 无需手动 import 进行引入
 - 🍍 [Pinia 状态管理](https://pinia.esm.dev/) - 你将会喜欢上的 Vue Store
-- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 功能强大且性能极高的 CSS 引擎
-- 😃 [icones](https://github.com/antfu/unplugin-icons) - 强大的图标库，各种图标集为你所用
+- 😃 [iconify](https://github.com/antfu/unplugin-icons) - 强大的图标库，各种图标集为你所用!
+- 🎨 [UnoCSS](https://github.com/unocss/unocss) - 功能强大且性能极高的 CSS 引擎，同时支持在 class 中使用 icon 图标
 - 🌍 [I18n 国际化开箱即用](./locales) - 想要翻译？是的，都可以！
 - 👩‍🎨 [NProgress](https://github.com/rstacruz/nprogress) - 页面加载进度反馈
-- 😃 [SVG 支持](https://github.com/jpkleemans/vite-svg-loader) - 支持以 组件形式使用 SVG 图片
 - 📑 [Markdown 支持](https://github.com/antfu/vite-plugin-md) - 随意的在页面中嵌入 Markdown
 - 🔑 完整支持的代码风格规范和代码提交规范
 
@@ -32,6 +31,7 @@
 
 - [🔍Icônes](https://icones.netlify.app/) - 使用任意的图标集
   - [unplugin-icons](https://github.com/antfu/unplugin-icons) - 自动按需引入你所需要的图标！
+  - [unocss](https://github.com/antfu/unplugin-icons) - 直接在 class 中声明你所需要的图标！
 
 ### 插件
 
@@ -39,7 +39,7 @@
 - [Pinia](https://pinia.esm.dev) - 新一代的 Vue Store 状态管理
 - [Axios](https://github.com/axios/axios) - 基于 Promise 的 HTTP 请求库
 - [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - 自动按需加载组件
-- [ "](https://github.com/antfu/unplugin-auto-import) - 自动按需加载 API
+- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动按需加载 API
 - [UnoCSS](https://github.com/unocss/unocss) - 强大的 CSS 引擎
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown 作为组件，也可以让组件在 Markdown 中使用
   - [markdown-it-prism](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) 的语法高亮
@@ -49,9 +49,9 @@
   - [vite-plugin-vue-i18n](https://github.com/intlify/vite-plugin-vue-i18n) - Vue I18n 的 Vite 插件
 - [vite-plugin-fonts](https://github.com/stafyniaksacha/vite-plugin-fonts) - Vite 的字体加载器
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
-- [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader) - 支持以 组件形式使用 SVG 图片
+- [unplugin-icons](https://github.com/antfu/unplugin-icons) - 支持以组件形式使用 SVG 图片，包括 iconify 图标库和本地 svg 图标
 - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist) - 允许你在 vite 中显式设置依赖项
-- [postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport) - 浏览器适配 Viewport 布局
+- [postcss-px-to-viewport-8-plugin](https://github.com/evrone/postcss-px-to-viewport) - 浏览器适配 Viewport 布局
 
 ### 开发工具
 
