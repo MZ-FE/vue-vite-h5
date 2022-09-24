@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import { Bridge } from '@dolphin-iot/jsbridge-sdk';
 
-export const useAppSotre = defineStore('app', () => {
+export const useAppStore = defineStore('app', () => {
   const appPlatform = ref('');
   const appVersion = ref('');
   function isIOS() {

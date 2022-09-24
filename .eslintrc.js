@@ -50,6 +50,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true, varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-use-before-define': ['error', { classes: true, functions: false, typedefs: false }],
     '@typescript-eslint/no-non-null-assertion': 'off',
-    'vue/multi-word-component-names': 'warn',
+    'vue/multi-word-component-names': 'off',
   },
 };

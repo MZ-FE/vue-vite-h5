@@ -1,35 +1,47 @@
 <template>
-  <van-nav-bar :title="t('language')" left-text="返回" left-arrow />
+  <div :class="{ 'bg-black': globalStore.isDarkTheme }">
+    <van-nav-bar :title="t('language')" />
+    <van-skeleton title :row="3" />
+    <van-radio-group v-model="globalStore.isDarkTheme">
+      <van-radio :name="true">深色模式</van-radio>
+      <van-radio :name="false">浅色模式</van-radio>
+    </van-radio-group>
+    <van-radio-group v-model="locale">
+      <van-radio name="zh-CN">中文</van-radio>
+      <van-radio name="en">English</van-radio>
+    </van-radio-group>
 
-  <van-skeleton title :row="3" />
+    <i-mdi-account-box class="text-30px" />
+    <i-custom-avatar />
+    <div class="i-line-md-loading-alt-loop text-30px"></div>
 
-  <van-radio-group v-model="locale">
-    <van-radio name="zh-CN">中文</van-radio>
-    <van-radio name="en">English</van-radio>
-  </van-radio-group>
-
-  <i-carbon-accessibility />
-  <i-mdi-account-box class="text-2rem" />
-  <i-custom-avatar />
-
-  <div class="mt-6 text-30px">{{ t('welcome to') }}1122333</div>
-  <div>
-    <van-button type="primary" @click="router.push({ name: 'process' })">
-      <span class="font-sans">MarkdownPage</span>
-    </van-button>
-    <van-button type="success" @click="router.push({ name: '401' })">401</van-button>
-    <van-button type="default" @click="router.push({ name: '404' })">404</van-button>
+    <div class="mt-6 text-30px" :class="{ 'text-white': globalStore.isDarkTheme }">{{ t('welcome to') }}1122333</div>
+    <div>
+      <van-button type="primary" @click="toProcess">
+        <span class="font-sans">MarkdownPage</span>
+      </van-button>
+      <van-button type="success" @click="to401">401</van-button>
+      <van-button type="default" @click="to404">404</van-button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useGlobalStore } from '@/store/modules/global';
+
 const router = useRouter();
-
+const globalStore = useGlobalStore();
 const { t, locale } = useI18n();
+const toProcess = () => {
+  globalStore.transitionName = 'fade-out';
+  router.push({ name: 'process' });
+};
+const to401 = () => {
+  globalStore.transitionName = 'fade-top';
+  router.push({ name: '401' });
+};
+const to404 = () => {
+  globalStore.transitionName = 'fade-left';
+  router.push({ name: '404' });
+};
 </script>
-
-<style lang="scss" scoped>
-a {
-  @apply text-sky-400 hover:(text-sky-600) transition-all ease-out duration-100;
-}
-</style>

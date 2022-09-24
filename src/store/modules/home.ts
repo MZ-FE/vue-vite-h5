@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 import { Bridge } from '@dolphin-iot/jsbridge-sdk';
-import { useUserSotre } from './user';
+import { useUserStore } from './user';
 
-export const useHomeSotre = defineStore('home', () => {
+export const useHomeStore = defineStore('home', () => {
   const homeInfo = ref<Meiju.HomeInfo>();
   async function updateHomeInfo() {
-    const userStore = useUserSotre();
+    const userStore = useUserStore();
     if (!userStore.userInfo) {
       await userStore.updateUserInfo();
     }

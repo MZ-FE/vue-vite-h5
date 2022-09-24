@@ -9,7 +9,7 @@ import App from './App.vue';
 
 import 'uno.css';
 // 统一浏览器默认样式
-import '@unocss/reset/normalize.css';
+import '@unocss/reset/eric-meyer.css';
 import '@/assets/styles/index.scss';
 import '../locales/zh-CN.json';
 import '../locales/en.json';

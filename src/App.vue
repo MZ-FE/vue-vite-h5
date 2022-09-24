@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="m-5">
+  <app-provider>
     <router-view></router-view>
-  </div>
+  </app-provider>
 </template>
