@@ -27,7 +27,7 @@ export default (srcPath: string) => {
       targets: ['defaults', 'not IE 11'],
     }),
     AutoImport({
-      dts: './src/auto-imports.d.ts',
+      dts: './src/types/auto-imports.d.ts',
       imports: ['vue', 'pinia', 'vue-router', 'vue-i18n', '@vueuse/core'],
       // Generate corresponding .eslintrc-auto-import.json file.
       // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
@@ -39,7 +39,7 @@ export default (srcPath: string) => {
       resolvers: [],
     }),
     Components({
-      dts: './src/components.d.ts',
+      dts: './src/types/components.d.ts',
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       // imports 指定组件所在位置，默认为 src/components; 有需要也可以加上 view 目录

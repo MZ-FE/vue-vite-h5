@@ -1,5 +1,3 @@
-/// <reference types="vite/client" />
-
 // 声明自动引入的 vue 组件
 declare module '*.vue' {
   import { DefineComponent } from 'vue';
