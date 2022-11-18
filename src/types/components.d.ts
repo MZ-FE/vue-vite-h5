@@ -8,11 +8,11 @@ export {};
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppProvider: typeof import('./../components/AppProvider.vue')['default'];
-    ICarbonAccessibility: typeof import('~icons/carbon/accessibility')['default'];
     ICustomAvatar: typeof import('~icons/custom/avatar')['default'];
     IMdiAccountBox: typeof import('~icons/mdi/account-box')['default'];
     RouterLink: typeof import('vue-router')['RouterLink'];
     RouterView: typeof import('vue-router')['RouterView'];
+    SvgIcon: typeof import('./../components/SvgIcon.vue')['default'];
     VanButton: typeof import('vant/es')['Button'];
     VanConfigProvider: typeof import('vant/es')['ConfigProvider'];
     VanEmpty: typeof import('vant/es')['Empty'];

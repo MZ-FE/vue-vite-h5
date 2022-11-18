@@ -1,8 +1,8 @@
 <template>
-  <div :class="{ 'bg-black': globalStore.isDarkTheme }">
-    <van-nav-bar :title="t('language')" />
-    <van-skeleton title :row="3" />
-    <van-radio-group v-model="globalStore.isDarkTheme">
+  <div>
+    <van-nav-bar :title="t('language')" fixed placeholder />
+    <van-skeleton title :row="3" class="mt-30px" />
+    <van-radio-group v-model="globalStore.isDarkTheme" class="mt-30px">
       <van-radio :name="true">深色模式</van-radio>
       <van-radio :name="false">浅色模式</van-radio>
     </van-radio-group>
@@ -11,11 +11,17 @@
       <van-radio name="en">English</van-radio>
     </van-radio-group>
 
+    <p class="mt-30px text-white">unplugin-icons图标：</p>
     <i-mdi-account-box class="text-30px" />
-    <i-custom-avatar />
+    <i-custom-avatar class="text-30px" />
+    <p>unocss图标：</p>
     <div class="i-line-md-loading-alt-loop text-30px"></div>
+    <div class="i-custom-avatar text-30px"></div>
+    <p>iconify在线图标：</p>
+    <svg-icon icon="line-md:downloading-loop" class="text-30px"></svg-icon>
+    <svg-icon icon="line-md:loading-twotone-loop" class="text-30px"></svg-icon>
 
-    <div class="mt-6 text-30px" :class="{ 'text-white': globalStore.isDarkTheme }">{{ t('welcome to') }}1122333</div>
+    <div class="mt-6 text-30px">{{ t('welcome to') }}1122333</div>
     <div>
       <van-button type="primary" @click="toProcess">
         <span class="font-sans">MarkdownPage</span>

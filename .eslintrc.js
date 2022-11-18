@@ -4,15 +4,6 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  globals: {
-    defineEmits: true,
-    document: true,
-    localStorage: true,
-    GLOBAL_VAR: true,
-    window: true,
-    defineProps: true,
-    defineExpose: true,
-  },
   extends: [
     './.eslintrc-auto-import.json',
     'airbnb-base',
