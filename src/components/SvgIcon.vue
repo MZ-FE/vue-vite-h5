@@ -8,7 +8,7 @@ import { Icon } from '@iconify/vue';
 
 interface Props {
   /** 图标名称 */
-  icon?: string;
+  icon: string;
 }
 defineProps<Props>();
 const attrs = useAttrs();
