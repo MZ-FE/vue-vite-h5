@@ -2,8 +2,8 @@
 
 ## 特性
 
-- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite) - 快！
-- 💪 [Typescript](https://www.typescriptlang.org/) - 当然！必不可少
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 3](https://github.com/vitejs/vite) - 打包更快！
+- 💪 [Typescript](https://www.typescriptlang.org/) - 代码更健壮！
 - 🎉 [Vant 4](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端 Vue 组件库
 - 🔥 [Axios 配置和封装](https://github.com/axios/axios) - 基于 Promise 的 HTTP 请求库
 - 💡 [Vue Router 4](https://router.vuejs.org/zh/) - Vuejs 的官方路由
@@ -21,17 +21,21 @@
 
 ### CSS 引擎
 
-- [UnoCSS](https://github.com/unocss/unocss) - 功能非常强大（完全可定制、属性化、纯 CSS 图标等功能）；性能更高，没有解析、AST、扫描，它是即时的（比 Windi CSS 或 Tailwind JIT 快 200 倍）。
+- [UnoCSS](https://github.com/unocss/unocss) - 功能非常强大（完全可定制、属性化、纯 CSS 图标等功能）；性能更高，没有解析、AST、扫描，它是即时的（比
+  Windi CSS 或 Tailwind JIT 快 200 倍）。
 
 ### UI 框架
 
-- [Vant](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端组件库
+- [Vant](https://vant-contrib.gitee.io/vant/#/zh-CN) - 基于 Vue.js 3 的轻量、可靠的移动端组件库，非常优雅的适配暗黑模式。
 
 ### Icons
 
-- [🔍Icônes](https://icones.netlify.app/) - 使用任意的图标集
+- [🔍Icônes](https://icones.js.org/) - 使用任意的图标集
   - [unplugin-icons](https://github.com/antfu/unplugin-icons) - 自动按需引入你所需要的图标！
   - [unocss](https://github.com/antfu/unplugin-icons) - 直接在 class 中声明你所需要的图标！
+  - [@iconify/vue](https://github.com/iconify/iconify/tree/main/components/vue) - 不再需要修改代码，根据名称动态加载！（注意：需要访问互联网加载 icon）
+
+> @iconify/vue 不支持本地 svg 文件，如果需要使用本地 svg，请考虑优先使用 unplugin-icons 或者 unocss
 
 ### 插件
 
@@ -44,14 +48,15 @@
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) - Markdown 作为组件，也可以让组件在 Markdown 中使用
   - [markdown-it-prism](https://github.com/jGleitz/markdown-it-prism) - [Prism](https://prismjs.com/) 的语法高亮
   - [prism-theme-vars](https://github.com/antfu/prism-theme-vars) - 利用 CSS 变量自定义 Prism.js 的主题
-  - [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes) - 统一设置 Markdown 里的超链接跳转方式
+  - [markdown-it-link-attributes](https://github.com/crookedneighbor/markdown-it-link-attributes) - 统一设置 Markdown
+    里的超链接跳转方式
 - [Vue I18n](https://github.com/intlify/vue-i18n-next) - 国际化
   - [vite-plugin-vue-i18n](https://github.com/intlify/vite-plugin-vue-i18n) - Vue I18n 的 Vite 插件
 - [vite-plugin-fonts](https://github.com/stafyniaksacha/vite-plugin-fonts) - Vite 的字体加载器
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
-- [unplugin-icons](https://github.com/antfu/unplugin-icons) - 支持以组件形式使用 SVG 图片，包括 iconify 图标库和本地 svg 图标
 - [vite-plugin-optimize-persist](https://github.com/antfu/vite-plugin-optimize-persist) - 允许你在 vite 中显式设置依赖项
 - [postcss-px-to-viewport-8-plugin](https://github.com/evrone/postcss-px-to-viewport) - 浏览器适配 Viewport 布局
+- [vite-plugin-compression](https://github.com/vbenjs/vite-plugin-compression) - 打包时再压缩一份 gzip 文件，配合 web 服务器使用，使用压缩后的资源加载速度更快
 
 ### 开发工具
 
@@ -111,12 +116,14 @@ npm run build
 
 ### manifest.json
 
-> 原生功能配置项，在项目工程根目录 pulic 文件夹内
+> 原生功能配置项，在项目工程根目录 public 文件夹内
 
 ```json5
 {
-  deviceType: '0x13', // 品类码
-  index: 'index.html', // 入口文件url
+  deviceType: '0x13',
+  // 品类码
+  index: 'index.html',
+  // 入口文件url
 }
 ```
 
@@ -161,3 +168,5 @@ standard-version -r minor // output v1.1.0
 standard-version -r patch // output v1.0.1
 standard-version -r 3.0.0 // output v3.0.0
 ```
+
+或者使用[bumpp](https://github.com/antfu/bumpp)这个 cli 进行打标签发版更加方便

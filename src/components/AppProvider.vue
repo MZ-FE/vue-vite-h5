@@ -16,5 +16,7 @@ const globalStore = useGlobalStore();
 // 可以在这配置主题
 const themeVars = {};
 const themeVarsLight = {};
-const themeVarsDark = {};
+const themeVarsDark = {
+  emptyDescriptionColor: 'white',
+};
 </script>

@@ -14,6 +14,7 @@ import ViteFonts from 'vite-plugin-fonts';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import LinkAttributes from 'markdown-it-link-attributes';
 import { resolve } from 'path';
+import viteCompression from 'vite-plugin-compression';
 
 const defaultClasses = 'prose prose-sm m-auto text-left';
 
@@ -78,5 +79,6 @@ export default (srcPath: string) => {
         });
       },
     }),
+    viteCompression(),
   ];
 };

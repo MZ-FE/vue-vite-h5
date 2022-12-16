@@ -1,7 +1,7 @@
 <template>
   <div>
-    <van-nav-bar class="fixed w-100vw" title="401标题" left-text="返回" left-arrow @click-left="goBack" />
-    <van-empty class="mt-[var(--van-nav-bar-height)]" image="network" description="401" />
+    <van-nav-bar class="w-100vw" title="401标题" left-text="返回" fixed placeholder left-arrow @click-left="goBack" />
+    <van-empty image="network" description="401" />
   </div>
 </template>
 
